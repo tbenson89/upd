@@ -108,5 +108,5 @@ app.get("/login" , (req , res) => {
 //  	 CONFIGURATION
 //=======================|
 app.listen(port , (req , res) =>  {
-	console.log("DreamsNStreams Initialized....");
+	console.log("uPawnDirect Initialized....");
 });
