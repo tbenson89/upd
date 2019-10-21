@@ -1,8 +1,8 @@
 {
-  "name": "dreams-n-things",
-  "version": "1.0.0",
-  "description": "Created by Slightly Modified Technologies",
-  "main": "app.js",
+  "name": "upawn-direct",
+  "version": "2.0.0",
+  "description": "Inspiration BackwardGraphics | Created by Slightly Modified Technologies",
+  "main": "server.js",
   "dependencies": {
     "angular": "^1.7.8",
     "body-parser": "^1.19.0",
@@ -21,8 +21,8 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node app.js"
+    "start": "node server.js"
   },
-  "author": "Slightly Modified Technologies",
+  "author": "A. Tyler Benson Slightly Modified Technologies",
   "license": "ISC"
 }
