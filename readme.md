@@ -1,12 +1,11 @@
-# 
-	* 
+# uPawnDirect
+	* Innovative Market and Inventory Software for secondhand resale and barter system.
 
 ## Routes
 * Index/Home
-* Discover
-* Signup -> Rego POST
-* Login
-* Logout
+
 
 ### Todo
-
+ALOT!!!!! 
+- COntinue refactor
+- Finish landing 
