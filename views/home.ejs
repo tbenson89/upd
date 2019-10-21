@@ -1,0 +1,36 @@
+<% include partials/header %>
+<% include partials/topnav %>
+	<div class="container-fluid"> 
+		<div class="row">
+			<!-- LEFT MENU SIDE NAV -->
+			<div class="col-md-2 bg-dark">
+				<% include partials/sidebar %>
+			</div><!--  END SIDE NAV -->
+			<!-- COL MAIN CONTENT -->
+			<div class="col-md-10 paddin-rmv">
+				<!-- START DYNAMIC PAGE DIV GROUPS -->
+				<div class="tab-content" id="v-pills-tabContent">	
+					<!-- The Landing Zone -->				
+					<% include menu/landing %>
+					<!-- The Profile Area -->
+					<% include menu/profile %>
+					<!-- The Account Page -->
+					<% include menu/account %>
+					<!-- The Discovery Zone -->
+					<% include menu/discover %>
+					<!-- The Project Area -->
+					<% include menu/projects %>
+					<!-- The Creator Arena -->
+					<% include menu/creators %>
+					<!-- The Genre Page -->
+					<% include menu/genres %>
+					<!-- The Multi-Media Zone -->
+					<% include menu/videos %>
+					<!-- The Shop Area -->
+					<% include menu/shop %>
+				</div><!-- END DYNAMIC PAGE DIV GROUP  -->
+			</div><!--  END MAIN CONTENT -->
+		</div><!--  END GRID SYSTEM -->
+	</div><!--  END CONTAINTER FLUID -->
+	
+<% include partials/footer %>
