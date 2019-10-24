@@ -7,9 +7,53 @@
 *     Magento Bootstrapped
 ============================-->
 <!-- Multi-tabbed card deck -->
-<div>
-
-</div>
+<div class="container">
+     <h1 class="display-2">Multi-tabbed Card Deck</h1>
+     <div class="row">
+        <div class="col-md-12">
+            <div class="card-deck">
+                <div class="card">
+                    <div class="card-header">
+                        <nav>
+                            <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                <a class="nav-item nav-link active" id="nav-mens-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home" aria-selected="true">Men's</a>
+                                <a class="nav-item nav-link" id="nav-womens-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile" aria-selected="false">Women's</a>
+                                <a class="nav-item nav-link" id="nav-outdoor-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact" aria-selected="false">Outdoor</a>
+                            </div>
+                        </nav>
+                    </div>
+                    <div class="card-body">
+                        <div class="tab-content" id="nav-tabContent">
+                            <div class="tab-pane fade show active" id="nav-home" role="tabpanel" aria-labelledby="nav-mens-tab">
+                                <h2 class="card-title">Men's Wear</h2>
+                                <p class="card-text">
+                                    Bacon ipsum dolor amet tenderloin t-bone venison, acon ball tip short ribs t-bone.
+                                    Picanha tenderloin cow shoulder ip short.
+                                </p>
+                                <a href="#" class="btn btn-primary">Shop</a>
+                            </div>
+                            <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-womens-tab">
+                                <h2 class="card-title">Women's Wear</h2>
+                                <p class="card-text">
+                                    Bacon ipsum dolor amet tenderloin t-bone venison, shoulder.
+                                    Picanha tenderloin cow loin ball tip buffalo alcatra.
+                                </p>
+                                <a href="#" class="btn btn-primary">Shop</a>
+                            </div>
+                            <div class="tab-pane fade" id="nav-contact" role="tabpanel" aria-labelledby="nav-outdoor-tab">
+                                <h2 class="card-title">Outdoor Gear</h2>
+                                <p class="card-text">
+                                    Picanha tenderloin cow shoulder beef, prosciutto tri-tip short loin ball tip buffalo alcatra.
+                                </p>
+                                <a href="#" class="btn btn-primary">Shop</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- End Column-->
+    </div> <!-- End Row-->
+</div> <!--End Container-->
 
 
 <!-- BLURB-CARD-CATS -->
@@ -181,3 +225,4 @@
 			 	</div>
 		 	</div>
 	 	</div> <!-- END 2ND ROW -->
+<% include partials/footer %>
