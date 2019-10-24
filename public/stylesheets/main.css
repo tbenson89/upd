@@ -13,12 +13,6 @@
 	border-color: #353535 !important;
 }
 
-.paddin-rmv {
-	padding-left: 0px;
-	padding-right: 0px;
-	padding-top: 0px;
-}
-
 
 /* =============================|
 	Sidenav Main Menu Styles    |
@@ -56,20 +50,6 @@ a[data-toggle="collapse"] {
 	background-image: url("../lib/images/landing/bruno-kelzer-unsplash.jpg");
 	background-repeat: no-repeat;
 	background-size: 100%;
-}
-
-.col img {
-	padding-bottom: 50%;
-	background-color: #000;
-}
-
-.col-md-6 {
-	max-width: 100%;
-	padding-right: 0px;
-}
-
-.colRight {
-	padding-left: 0px;
 }
 
 .jumbotron p {
