@@ -24,7 +24,7 @@ const 	User  			= require("./models/User"), // The User Model
 //==================|
 // Cloud Connection
 // mongoose.connect(uri , {
-// 	useUnifiedTopology: true, 
+// 	useUnifiedTopology: true,
 // 	useNewUrlParser: true,
 // 	useCreateIndex: true
 // }).then(() => {
