@@ -22,21 +22,6 @@ class SlideEditor extends \Magento\Framework\View\Element\Template {
         parent::__construct($context , $slideCollection , $data);
     }
 
-    public function _prepareLayout()
-    {
-        $this->pageConfig->getTitle()->set(__('Slider Editor'));
-
-        return parent::_prepareLayout();
-    }
-
-    protected function getConnection()
-    {
-        if (!$this->connection) {
-            $this->connection = $this->_resource->getConnection('core_write');
-        }
-
-        return $this->connection;
-    }
 
 
     public function sliderDataWriter() {
