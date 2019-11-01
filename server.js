@@ -12,11 +12,7 @@ const 	express 		= require('express'),
 		mongoose		= require("mongoose"); // DB ODM
 
 const 	User  			= require("./models/User"), // The User Model
-		Admin  			= require("./models/Admin"), // The Admin Model
-		Listener  		= require("./models/Listener"), // THe Listener Model
-		Creator 		= require("./models/Creator"), // The Creator Model
-		Track 			= require("./models/Track"), // The Track (Song) Model
-		Album 			= require("./models/Album"); // The Album Model
+		Admin  			= require("./models/Admin"); // The Admin Model
 
 //==================|
 // 	    DATABASE
