@@ -1,4 +1,4 @@
-var mongoose = require("mongoose");
+const mongoose = require("mongoose");
 
 // Each User Object will have the following: 
 /* 
@@ -13,16 +13,16 @@ var mongoose = require("mongoose");
 	Date when the user was created
 */
 
-var userSchema = new mongoose.Schema({
-	name: String,
-	f_name: String,
-	l_name: String,
-	email: String,
-	Password: String,
-	location: String,
-	phone: String,
-	plan: String,
-	dateCreated: String
+const userSchema = new mongoose.Schema({
+    name: String,
+    f_name: String,
+    l_name: String,
+    email: String,
+    Password: String,
+    location: String,
+    phone: String,
+    plan: String,
+    dateCreated: String
 });
 
-module.exports = mongoose.model("user" , userSchema);
+module.exports = mongoose.model("user", userSchema);
