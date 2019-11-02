@@ -36,9 +36,9 @@ a[data-toggle="collapse"] {
 	position: relative;
 }
 
-/* ===================================|
-	Background Jumbo Slider Styles    |
-====================================*/
+/* ============================|
+	Global-Bg Jumbo Styles    |
+============================*/
 .jumbotron {
 	background-color: #000;
 	border-radius: 0px;
@@ -55,24 +55,31 @@ a[data-toggle="collapse"] {
   text-shadow: 1px 1px 5px black;
 }
 
-.jumbo-hdr {
-	background-image: url("../lib/images/landing/bruno-kelzer-unsplash.jpg");
-	background-repeat: no-repeat;
-	background-size: 100%;
-}
-
 .jumbotron p {
 	color: #808080;
 }
 
-/* Discovery Zone */
-#discover-header {
+/* ========================|
+	Home-JumboHDR Styles  |
+========================*/
+#jumbo-hdr {
+	background-image: url("../lib/images/landing/bruno-kelzer-unsplash.jpg");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	margin-bottom: 0;
+	margin-left: 0;
+}
+
+/* ===========================|
+	Discovery Zone - Styles  |
+===========================*/
+#discovery-header {
 	z-index: 1;
 	position: relative;
 	padding-top: 5vh;
 }
 
-#discover-header h1 {
+#discovery-header h1 {
 	color: #fff;
 }
 
@@ -80,8 +87,5 @@ a[data-toggle="collapse"] {
 
 
 /* ===============================|
-	Footer Music Stream Styles    |
+	   |
 =================================*/
-.page-footer a {
-	font-size: 24px;
-}
