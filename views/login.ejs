@@ -3,20 +3,22 @@
 <div class="container">
   <h1 class="display-4"><strong>Login Portal:</strong></h1>
   <div class="container">
-    <form class="container-fluid">
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+    <div class="card">
+      <form class="container-fluid">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+          </div>
         </div>
-        <div class="form-group col-md-6">
-          <label for="inputPassword4">Password</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
-        </div>
-      </div>
-      <button type="submit" class="btn btn-dark">Login</button>
-      <p><i>I want this styled better, however let's get the rego route setup and communicating with Mongo!</i></p>
-    </form>
+        <button type="submit" class="btn btn-dark">Login</button>
+        <p><i>I want this styled better, however let's get the rego route setup and communicating with Mongo!</i></p>
+      </form>
+    </div>
   </div>
 </div>
 <% include partials/footer %>

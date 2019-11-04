@@ -1,40 +1,41 @@
 <% include partials/header %>
 <% include partials/topnav %>
 <div class="container">
-  <h1 class="display-4"><strong>Let's Create your Account</strong></h1>
-  <div class="container">
-    <form action="/register" method="POST" class="container-fluid">
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputEmail4">Email</label>
-          <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+  <div class="card">
+    <h1 class="display-4"><strong>Let's Create your Account</strong></h1>
+    <div class="container">
+      <form action="/register" method="POST" class="container-fluid">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputEmail4">Email</label>
+            <input type="email" class="form-control" id="inputEmail4" placeholder="Email">
+          </div>
+          <div class="form-group col-md-6">
+            <label for="inputPassword4">Password</label>
+            <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+          </div>
         </div>
-        <div class="form-group col-md-6">
-          <label for="inputPassword4">Password</label>
-          <input type="password" class="form-control" id="inputPassword4" placeholder="Password">
+        <div class="form-group">
+          <label for="inputAddress">Address</label>
+          <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
         </div>
-      </div>
-      <div class="form-group">
-        <label for="inputAddress">Address</label>
-        <input type="text" class="form-control" id="inputAddress" placeholder="1234 Main St">
-      </div>
-      <div class="form-row">
-        <div class="form-group col-md-6">
-          <label for="inputCity">City</label>
-          <input type="text" class="form-control" id="inputCity">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="inputCity">City</label>
+            <input type="text" class="form-control" id="inputCity">
+          </div>
+          <div class="form-group col-md-4">
+            <label for="inputState">State</label>
+            <input type="text" class="form-control" id="inputState">
+          </div>
+          <div class="form-group col-md-2">
+            <label for="inputZip">Zip</label>
+            <input type="text" class="form-control" id="inputZip">
+          </div>
         </div>
-        <div class="form-group col-md-4">
-          <label for="inputState">State</label>
-          <input type="text" class="form-control" id="inputState">
-        </div>
-        <div class="form-group col-md-2">
-          <label for="inputZip">Zip</label>
-          <input type="text" class="form-control" id="inputZip">
-        </div>
-      </div>
-      <button type="submit" class="btn btn-primary">Sign up</button>
-      <p><i>I want this styled better, however let's get the rego route setup and communicating with Mongo!</i></p>
-    </form>
+        <button type="submit" class="btn btn-primary">Sign up</button>
+        <p><i>I want this styled better, however let's get the rego route setup and communicating with Mongo!</i></p>
+      </form>
+    </div>
   </div>
 </div>
-<% include partials/footer %>
