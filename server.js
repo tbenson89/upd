@@ -1,5 +1,5 @@
 const port = process.env.PORT || 9000;
-const uri = "mongodb+srv://tbenson:fake123@dreamsnthings.mongodb.net/dnt?retryWrites=true&w=majority";
+const uri = "mongodb+srv://tbenson:fake123@upd.mongodb.net/dnt?retryWrites=true&w=majority";
 
 const 	express 		= require('express'),
 		app 			= express(),
@@ -32,7 +32,7 @@ const 	User  			= require("./models/User"), // The User Model
 // 	console.log("ERROR! What is going on.... Details: " + err.message);
 // });
 // Local Connection
-mongoose.connect("mongodb://localhost:27017/dnt_db" , { useUnifiedTopology: true , useNewUrlParser: true });
+mongoose.connect("mongodb://localhost:27017/upd_db" , { useUnifiedTopology: true , useNewUrlParser: true });
 
 //==================|
 // 	  APPLICATION
@@ -124,6 +124,4 @@ app.get("/login" , (req , res) => {
 // 	    	SERVER
 //  	 CONFIGURATION
 //=======================|
-app.listen(port , (req , res) =>  {
-	console.log("uPawnDirect Initialized....");
-});
+app.listen(port  =>  {console.log("uPawnDirect Initialized....");});
