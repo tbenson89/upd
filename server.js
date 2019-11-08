@@ -1,5 +1,5 @@
 const port = process.env.PORT || 9000;
-const uri = "mongodb+srv://tbenson:fake123@upd.mongodb.net/dnt?retryWrites=true&w=majority";
+const uri = "mongodb+srv://tbenson:fake123@upd.mongodb.net/upd?retryWrites=true&w=majority";
 
 const 	express 		= require('express'),
 		app 			= express(),
