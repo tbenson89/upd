@@ -124,4 +124,4 @@ app.get("/login" , (req , res) => {
 // 	    	SERVER
 //  	 CONFIGURATION
 //=======================|
-app.listen(port  =>  {console.log("uPawnDirect Initialized....");});
+app.listen(port , (req , res) => {console.log("uPawnDirect Initialized....");});
