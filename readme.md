@@ -8,7 +8,11 @@
 * Account
 * Quote of the Day - API GET
 
+## Setup
+* You will need Mongo on your local machine
+* Download and install mongodb config default mongo port
 
 ### Todo
     - Setup Database for admin and user front end (outer) view
-    _ Setup Angular for better dev tools. 
+    - Split outer and inner views use angular for admin dashboard and plugins. 
+    - Setup Angular for better dev tools. 
