@@ -7,7 +7,6 @@ const mongoose = require("mongoose");
 	username
 	Password (handled with passport later)
 	Location (Address or GPS)
-	Plan the Users Subscription (Permissions) ?? which one is this lol main user? 
 	An Email
 	Phone number 
 	Date when the user was created
@@ -21,7 +20,6 @@ const userSchema = new mongoose.Schema({
     Password: String,
     location: String,
     phone: String,
-    plan: String,
     dateCreated: String
 });
 
