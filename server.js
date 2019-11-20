@@ -3,6 +3,7 @@ const uri = "mongodb+srv://tbenson:fake123@upd.mongodb.net/upd?retryWrites=true&
 
 const 	express 		= require('express'),
 		app 			= express(),
+		graphqlHTTP 	= require('express-graphql'),
 		router			= require("./conf/routes.js"), // Index Routes
 		bodyParser 		= require("body-parser"), // Let us Read the REQ.
 		passport 		= require("passport"),
@@ -16,7 +17,14 @@ const 	express 		= require('express'),
 
 
 const 	User  			= require("./models/User"), // The User Model
+		{buildSchema} 	= require('graphql'),
 		Admin  			= require("./models/Admin"); // The Admin Model
+
+// Testing
+let root = { hello: () => 'Hello world!' };
+
+
+
 
 //==================|
 // 	    DATABASE
@@ -39,6 +47,18 @@ mongoose.connect("mongodb://localhost:27017/upd_db" , { useUnifiedTopology: true
 // 	  APPLICATION
 //   CONFIGURATION
 //==================|
+// GraphQL
+let schema = buildSchema(`
+  type Query {
+    hello: String
+  }
+`);
+app.use('/graphql', graphqlHTTP({
+	schema: schema,
+	rootValue: root,
+	graphiql: true,
+}));
+
 app.set('view engine' , 'ejs');
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -71,3 +91,4 @@ app.use(router);
 //  	 CONFIGURATION
 //=======================|
 app.listen(port , process.env.IP , (req , res) => {console.log("uPawnDirect Initialized....");});
+app.listen(4000, process.env.IP , () => console.log('Now browse to localhost:4000/graphql'));

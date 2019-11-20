@@ -2,6 +2,7 @@
 //  EXPRESS ROUTER
 //===================
 const   express     = require("express"),
+        rp			= require('request-promise'), // API Request tool
         router      = express.Router();
 
 /*HOME PAGE*/
