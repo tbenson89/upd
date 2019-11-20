@@ -3,6 +3,7 @@ const uri = "mongodb+srv://tbenson:fake123@upd.mongodb.net/upd?retryWrites=true&
 
 const 	express 		= require('express'),
 		app 			= express(),
+		router			= require("./conf/routes.js"), // Index Routes
 		bodyParser 		= require("body-parser"), // Let us Read the REQ.
 		passport 		= require("passport"),
 		methodOverride	= require("method-override"), // Method - Override
@@ -47,6 +48,9 @@ app.use(express.static(__dirname + "/public"));
 // Implementing Method Override 
 app.use(methodOverride("_method"));
 
+// Routing Configuration
+app.use(router);
+
 //================|
 // Passport Config
 //================|
@@ -62,66 +66,8 @@ app.use(methodOverride("_method"));
 // passport.serializeUser(User.serializeUser());
 // passport.deserializeUser(User.deserializeUser());
 
-
-//=======================|
-//    ROUTES 
-//=======================|
-/*HOME PAGE*/
-app.get("/" , (req , res) => {
-	res.render("home");
-});
-
-app.get("/api/quote/random" , (req , res) => {
-	// get request to API
-	rp('http://quotes.rest/qod.json')
-		.then((id) => {
-			const parseData = JSON.parse(id);
-			console.log("Object: " , parseData);
-			console.log("Contents: " , parseData["contents"]["quotes"]);
-			console.log(["quote"]);
-			let QOTD 	= parseData["contents"]["quotes"]["quote"],
-				author 	= parseData["contents"]["quotes"]["author"],
-				date 	= parseData["contents"]["quotes"]["date"],
-				title 	= parseData["contents"]["quotes"]["quoteTtl"];
-			res.send(QOTD , author , date , title);
-		}).catch((err) => {
-			console.log("Error Obtaining DataJSON");
-			console.log(err);
-	});
-
-	// requestify.get('http://quotes.rest/quote/random.json').then(function(response) {
-	// 	console.log(response.body);
-	// 	res.send(response.body);
-	// });
-});
-
-
-
-/*SCRATCHPAD*/
-app.get("/scratchit" , (req , res) => {
-	res.render("scratchpad");
-});
-
-
-
-/* Registration Page */
-app.get("/signup" , (req , res) => {
-	res.render("signup");
-});
-
-app.post("/register" , (req , res) => {
-	let newUser = new User(req.body);
-});
-
-/* Login Route */
-app.get("/login" , (req , res) => {
-	res.render("login");
-});
-
-
-
 //=======================|
 // 	    	SERVER
 //  	 CONFIGURATION
 //=======================|
-app.listen(port , (req , res) => {console.log("uPawnDirect Initialized....");});
+app.listen(port , process.env.IP , (req , res) => {console.log("uPawnDirect Initialized....");});
