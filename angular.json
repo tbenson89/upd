@@ -67,18 +67,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "upd:build"
+            "browserTarget": "upawn-direct:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "upd:build:production"
+              "browserTarget": "upawn-direct:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "upd:build"
+            "browserTarget": "upawn-direct:build"
           }
         },
         "test": {
@@ -115,11 +115,11 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "upd:serve"
+            "devServerTarget": "upawn-direct:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "upd:serve:production"
+              "devServerTarget": "upawn-direct:serve:production"
             }
           }
         }
