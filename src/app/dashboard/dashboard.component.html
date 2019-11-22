@@ -1,0 +1,56 @@
+<h3>Top Super Heroes</h3>
+<div class="grid grid-pad">
+  <a *ngFor="let hero of heroes" class="col-1-4"
+      routerLink="/detail/{{hero.id}}">
+    <div class="module hero">
+      <h4>{{hero.name}}</h4>
+    </div>
+  </a>
+</div>
+<hr>
+<h4>NOTES:</h4>
+<div>
+  <h4>Why Services?</h4>
+  <p>
+    Components shouldn't fetch or save data directly and they certainly shouldn't knowingly present fake data.
+    They should focus on presenting data and delegate data access to a service.
+  </p>
+  <blockquote>
+    This is a typical "service-in-service" scenario: you inject the MessageService into the HeroService which is injected into the HeroesComponent.
+  </blockquote>
+  <p>
+    The messageService property must be public because you're going to bind to it in the template.
+  </p>
+  <blockquote>
+    Angular only binds to public component properties.
+  </blockquote>
+  <blockquote>
+    --flat puts the file in src/app instead of its own folder.
+    <br>
+    <br>
+    --module=app tells the CLI to register it in the imports array of the AppModule.
+  </blockquote>
+
+  <div>
+    <h4>A typical Angular Route has two properties:</h4>
+    <ul>
+      <li>
+        <strong>path:</strong> a string that matches the URL in the browser address bar.
+      </li>
+      <li>
+        <strong>component:</strong> the component that the router should create when navigating to this route.
+      </li>
+    </ul>
+  </div>
+  <blockquote>
+    The RouterOutlet is one of the router directives that became available to the AppComponent because AppModule imports AppRoutingModule which exported RouterModule.
+  </blockquote>
+  <p>
+    There's really nothing for the component to do with the Observable returned by heroService.delete() but it must subscribe anyway.
+    <br>
+    <br>
+    <strong>If you neglect to subscribe(), the service will not send the delete request to the server.</strong>
+  </p>
+
+</div>
+

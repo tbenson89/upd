@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-// import { HeroService } from "../services/hero.service";
+
 import { Hero } from "../hero";
-import { HEROES } from "../mock-heroes";
+import { HeroService } from "../services/hero.service";
 
 @Component({
   selector: 'app-heroes',
@@ -9,23 +9,36 @@ import { HEROES } from "../mock-heroes";
   styleUrls: ['./heroes.component.scss']
 })
 export class HeroesComponent implements OnInit {
-  hero: Hero = {
-    id: 0,
-    name: 'The Flash'
-  };
+  heroes: Hero[];
 
-  // Declare mockList of HEROES
-  heroes = HEROES;
-
-  // when user selects from li's
-  selectedHero: Hero;
-  onSelect(hero: Hero): void {
-    this.selectedHero = hero;
-  };
-
-  constructor() { }
-
-  ngOnInit() {
+  constructor(private heroService: HeroService) {
   }
 
+  ngOnInit() {
+    this.getHeroes();
+  }
+
+  // Get the Heroes from Service
+  getHeroes(): void {
+    this.heroService.getHeroes()
+      .subscribe(heroes => this.heroes = heroes);
+  }
+
+  //==================|
+  //  CRUD Functions
+  //=================|
+  // CREATE: Create new Hero
+  add(name: string): void {
+    name = name.trim();
+    if(!name) { return;}
+    this.heroService.addHero({ name } as Hero)
+      .subscribe(hero => {
+        this.heroes.push(hero);
+      })
+  }
+  // DELETE: Delete Hero
+  delete(hero: Hero): void {
+    this.heroes = this.heroes.filter(h => h !== hero);
+    this.heroService.deleteHero(hero).subscribe();
+  }
 }
