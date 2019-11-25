@@ -1,4 +1,4 @@
-const port = process.env.PORT || 9000;
+const port = process.env.PORT || 9000 && 4000;
 const uri = "mongodb+srv://tbenson:fake123@upd.mongodb.net/upd?retryWrites=true&w=majority";
 
 const 	express 		= require('express'),
@@ -65,7 +65,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 // Serving the directory
 app.use(express.static(__dirname + "/public"));
 
-// Implementing Method Override 
+// Implementing Method Override
 app.use(methodOverride("_method"));
 
 // Routing Configuration
@@ -90,5 +90,4 @@ app.use(router);
 // 	    	SERVER
 //  	 CONFIGURATION
 //=======================|
-app.listen(port , process.env.IP , (req , res) => {console.log("uPawnDirect Initialized....");});
-app.listen(4000, process.env.IP , () => console.log('Now browse to localhost:4000/graphql'));
+app.listen(port , process.env.IP , () => {console.log("uPawnDirect Initialized.... localhost:9000");});
