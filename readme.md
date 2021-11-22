@@ -8,6 +8,30 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
+## Routes
+* Index/Home
+* Account
+* Quote of the Day - API GET
+
+## Setup
+* You will need Mongo on your local machine
+* Download and install mongodb config default mongo port
+
+### Todo
+    - Setup Database for admin and user front end (outer) view
+    - Split outer and inner views use angular for admin dashboard and plugins. 
+    - Setup Angular for better dev tools. 
+
+
+### Important
+- Add what the project is fully about 
+- what you still need to do 
+- what the plan of the project is 
+- use cases of the project 
+- dead/alive? 
+
+
+// Default Readme data
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
@@ -27,17 +51,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
-
-## Routes
-* Index/Home
-* Account
-* Quote of the Day - API GET
-
-## Setup
-* You will need Mongo on your local machine
-* Download and install mongodb config default mongo port
-
-### Todo
-    - Setup Database for admin and user front end (outer) view
-    - Split outer and inner views use angular for admin dashboard and plugins. 
-    - Setup Angular for better dev tools. 
